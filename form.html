@@ -8,21 +8,19 @@
 <hr>
 <br><br>
 
-<form action="proses.php" methode="POST">
-    <table>
-    <tr>
-        <td><label style="color:red">*</label>Masukkan Angka</label></td>
-        <td><input type ="number" name="angka1" id="idemploye">
-            <td><select name="operasi">
-                <option value="select">Pilih Operasi
-                <option value="A1">+</option>
-                <option value="A2">-</option>
-                <option value="A3">*</option>
-            </select>
-        <input type="number" name="angka2">
-    </tr>
+<form action="proses.php" method="post">
+    <label for="angka1">Angka 1:</label>
+    <input type="number" name="angka1" id="angka1" required /><br /><br />
+    <label for="angka2">Angka 2:</label>
 
-    <tr>
-        <td><br><input type="submit"> 
-            <input type="reset" value="Cancel"><br></td>
-    </tr>
+    <input type="number" name="angka2" id="angka2" required /><br /><br />
+    <label for="operator">Operator:</label>
+    <select name="operator" id="operator">
+      <option value="+">+</option>
+      <option value="-">-</option>
+      <option value="*">*</option>
+    </select>
+      <br/><br/>
+
+    <button type="submit" name="submit">Hitung</button>
+  </form>
